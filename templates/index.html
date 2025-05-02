@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GST Calculator (India)</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>GST Calculator</h1>
+        <form method="POST">
+            <label>Amount (INR):</label>
+            <input type="number" name="amount" step="0.01" required>
+            <label>GST Rate (%):</label>
+            <input type="number" name="gst_rate" step="0.01" required>
+            <button type="submit">Calculate</button>
+        </form>
+        {% if result %}
+            <div class="result">
+                {% if result.error %}
+                    <p class="error">{{ result.error }}</p>
+                {% else %}
+                    <p>Original Amount: ₹{{ result.original }}</p>
+                    <p>GST Rate: {{ result.gst_rate }}%</p>
+                    <p>GST Amount: ₹{{ result.gst_amount }}</p>
+                    <p><strong>Total: ₹{{ result.total }}</strong></p>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
