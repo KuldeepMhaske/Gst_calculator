@@ -21,8 +21,8 @@ A simple and beautiful **GST Calculator** built with **Python Flask**. This web 
 
 ## 🖼️ Screenshot
 
-<!-- Replace with your actual image URL or GitHub-uploaded asset -->
-![GST Calculator Screenshot](https://github.com/YOUR_USERNAME/YOUR_REPO/raw/main/static/preview.png)
+![GSTCalculator](https://github.com/user-attachments/assets/1d9e5f46-8900-4b25-82f2-ef1bc40be9b0)
+
 
 ---
 
